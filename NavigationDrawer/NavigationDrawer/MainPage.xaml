@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:NavigationDrawer"
+             xmlns:navigationdrawer="clr-namespace:Syncfusion.SfNavigationDrawer.XForms;assembly=Syncfusion.SfNavigationDrawer.XForms"
+             x:Class="NavigationDrawer.MainPage">
+
+
+        <ContentPage.Content>
+            
+            <navigationdrawer:SfNavigationDrawer x:Name="navigationDrawer">
+
+            <navigationdrawer:SfNavigationDrawer.ContentView>
+                <StackLayout HeightRequest="500" VerticalOptions="Center" HorizontalOptions="Center">
+                    <Button x:Name="button1" HeightRequest="200"  Text="Toogle Default Drawer" Clicked="button1_Clicked"/>
+                    <Button x:Name="button2" HeightRequest="200" Text="Toogle secondary Drawer" Clicked="button2_Clicked"/>
+                    
+                </StackLayout>
+            </navigationdrawer:SfNavigationDrawer.ContentView>
+
+                
+                <navigationdrawer:SfNavigationDrawer.DefaultDrawerSettings>
+
+
+                <navigationdrawer:DrawerSettings
+                      DrawerWidth="200"
+                    DrawerHeight="150"
+                    DrawerHeaderHeight="150"
+                        
+                    DrawerFooterHeight="150"
+                    Position="Left"
+                    EnableSwipeGesture="True"
+                    >
+                    <navigationdrawer:DrawerSettings.DrawerHeaderView>
+                        <StackLayout BackgroundColor="Red">
+                        <Label x:Name="headerlab1" Text="HeaderView">
+                        </Label>
+                        </StackLayout>
+                    </navigationdrawer:DrawerSettings.DrawerHeaderView>
+                    <navigationdrawer:DrawerSettings.DrawerFooterView>
+                        <StackLayout BackgroundColor="Yellow">
+                            <Label x:Name="headerlab2" Text="FooterView">
+                            </Label>
+                        </StackLayout>
+                    </navigationdrawer:DrawerSettings.DrawerFooterView>
+                    <navigationdrawer:DrawerSettings.DrawerContentView>
+                        <StackLayout BackgroundColor="Green">
+                            <Label x:Name="headerlab3" Text="ContentView">
+                            </Label>
+                        </StackLayout>
+                    </navigationdrawer:DrawerSettings.DrawerContentView>
+                </navigationdrawer:DrawerSettings>
+
+            </navigationdrawer:SfNavigationDrawer.DefaultDrawerSettings>
+
+            <navigationdrawer:SfNavigationDrawer.SecondaryDrawerSettings>
+
+                <navigationdrawer:DrawerSettings 
+                    DrawerWidth="200"
+                    DrawerHeight="150"
+                    DrawerHeaderHeight="150"
+                    DrawerFooterHeight="150"
+                    Position="Right"
+                    EnableSwipeGesture="True"
+                    
+                    >
+                    <navigationdrawer:DrawerSettings.DrawerFooterView>
+                        <StackLayout BackgroundColor="Blue">
+                            <Label x:Name="headerlab4" Text="secondary FooterView">
+                            </Label>
+                        </StackLayout>
+                    </navigationdrawer:DrawerSettings.DrawerFooterView>
+                    <navigationdrawer:DrawerSettings.DrawerHeaderView>
+                        <StackLayout BackgroundColor="Orange">
+                            <Label x:Name="headerlab5" Text="Secondary HeaderView">
+                            </Label>
+                        </StackLayout>
+                    </navigationdrawer:DrawerSettings.DrawerHeaderView>
+                    <navigationdrawer:DrawerSettings.DrawerContentView>
+                        <StackLayout BackgroundColor="Red">
+                            <Label x:Name="Contentview2" Text="secondary contentView"/>
+                        </StackLayout>
+                    </navigationdrawer:DrawerSettings.DrawerContentView>
+                        
+                </navigationdrawer:DrawerSettings>
+            </navigationdrawer:SfNavigationDrawer.SecondaryDrawerSettings>
+           
+        </navigationdrawer:SfNavigationDrawer>
+    </ContentPage.Content>
+</ContentPage>
+
+
+ 
+
+ 
+
+  
